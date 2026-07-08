@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Kneale, Software Engineer and Solution Architect</title>
+<meta name="description" content="Peter Kneale is an Australian software engineer and solution architect based in Sydney, building reliable, production grade systems across genomics, finance, insurance and SaaS.">
+<style>
+  :root {
+    --ink: #1d2330;
+    --muted: #5c6472;
+    --faint: #8b93a3;
+    --accent: #1f5f8b;
+    --side-bg: #1d2735;
+    --side-ink: #e9edf3;
+    --side-muted: #a8b3c4;
+    --side-accent: #7fb2dd;
+    --line: #e6e9ef;
+    --sidew: 300px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: #fff;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.58;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  main a[href] { color: var(--accent); }
+  main a[href]:hover { text-decoration: underline; }
+
+  .layout { display: grid; grid-template-columns: var(--sidew) 1fr; min-height: 100vh; max-width: 1080px; margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,.06); }
+
+  /* Sidebar */
+  aside {
+    background: var(--side-bg);
+    color: var(--side-ink);
+    padding: 48px 30px;
+  }
+  aside h1 { font-size: 30px; line-height: 1.15; margin: 0 0 6px; font-weight: 700; letter-spacing: -0.01em; }
+  aside .role-line { color: var(--side-accent); font-size: 15px; font-weight: 500; margin: 0 0 28px; }
+  aside h2 {
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--side-accent); margin: 30px 0 12px; font-weight: 700;
+  }
+  aside .contact a { display: block; color: var(--side-muted); font-size: 14px; margin-bottom: 8px; word-break: break-word; }
+  aside .contact a:hover { color: #fff; }
+  aside .loc { color: var(--side-muted); font-size: 14px; margin-top: 2px; }
+  aside .skillblock { margin-bottom: 14px; }
+  aside .skillblock .lbl { color: var(--side-ink); font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  aside .skillblock .val { color: var(--side-muted); font-size: 13px; line-height: 1.5; }
+  aside .edu { color: var(--side-muted); font-size: 13.5px; }
+  aside .edu strong { color: var(--side-ink); display: block; font-weight: 600; }
+
+  /* Main */
+  main { padding: 52px 46px 64px; }
+  .lede { font-size: 17px; color: var(--ink); margin: 0 0 6px; line-height: 1.55; }
+  main section { margin-top: 38px; }
+  main h2 {
+    font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--accent); font-weight: 700; margin: 0 0 20px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--line);
+  }
+  .summary p { margin: 0 0 12px; color: var(--muted); }
+
+  .role { margin-bottom: 22px; page-break-inside: avoid; }
+  .role-top { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .role-title { font-weight: 650; font-size: 16.5px; }
+  .role-org { color: var(--accent); font-weight: 600; }
+  .role-dates { font-size: 12.5px; color: var(--faint); white-space: nowrap; }
+  .role-blurb { color: var(--muted); margin: 3px 0 6px; font-size: 15px; }
+  .label { font-weight: 700; color: var(--ink); font-size: 11.5px; text-transform: uppercase; letter-spacing: .12em; margin: 12px 0 2px; }
+  ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  li { margin-bottom: 5px; }
+
+  .proj-note { color: var(--faint); font-size: 13.5px; margin: -8px 0 12px; }
+  .proj-cat { font-size: 13px; color: var(--ink); font-weight: 700; margin: 18px 0 4px; }
+  .proj { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; gap: 14px; align-items: baseline; }
+  .proj:last-child { border-bottom: none; }
+  .proj .name { flex: 0 0 210px; font-weight: 650; font-size: 15px; overflow-wrap: anywhere; }
+  .proj .name small { display: block; color: var(--faint); font-weight: 400; font-size: 12px; }
+  .proj .desc { color: var(--muted); font-size: 14.5px; }
+
+  footer { margin-top: 40px; color: var(--faint); font-size: 12.5px; }
+
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; box-shadow: none; }
+    main { padding: 36px 24px 56px; }
+    aside { padding: 40px 24px; }
+    .proj { flex-direction: column; gap: 2px; }
+    .proj .name { flex: none; }
+  }
+  @media print {
+    .layout { grid-template-columns: var(--sidew) 1fr; box-shadow: none; max-width: none; }
+    aside { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside>
+    <h1>Peter Kneale</h1>
+    <p class="role-line">Software Engineer &amp; Solution Architect</p>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="https://github.com/PeterKneale">github</a>
+      <a href="https://www.linkedin.com/in/knealepeter">linkedin</a>
+      <a href="mailto:peterkneale@gmail.com">peterkneale@gmail.com</a>
+    </div>
+    <div class="loc">Sydney, Australia</div>
+
+    <h2>Skills</h2>
+    <div class="skillblock"><div class="lbl">Languages</div><div class="val">C# / .NET (20+ yrs), Python, Rust, R, SQL, JavaScript</div></div>
+    <div class="skillblock"><div class="lbl">Cloud &amp; DevOps</div><div class="val">AWS, Docker, Kubernetes, GitHub Actions, IaC, Terraform, CI/CD</div></div>
+    <div class="skillblock"><div class="lbl">Architecture</div><div class="val">Modular monolith, microservices, DDD, CQRS, event sourcing, multi tenant SaaS</div></div>
+    <div class="skillblock"><div class="lbl">Data</div><div class="val">PostgreSQL, SQL Server, MongoDB, EF Core, Dapper, Marten</div></div>
+    <div class="skillblock"><div class="lbl">Web</div><div class="val">ASP.NET Core, minimal APIs, Razor Pages, HTMX, gRPC, YARP</div></div>
+    <div class="skillblock"><div class="lbl">Testing</div><div class="val">TDD, xUnit, NUnit, Moq, SpecFlow, Selenium, full SDLC</div></div>
+    <div class="skillblock"><div class="lbl">Bioinformatics</div><div class="val">Nextflow, nf-core, RNA-seq, splice variant analysis, SpliceAI, VCF / BAM / FASTA</div></div>
+
+    <h2>Education</h2>
+    <div class="edu"><strong>Bachelor of Science (Computing)</strong>University of Western Sydney, 2000</div>
+  </aside>
+
+  <main>
+    <p class="lede">Australian software engineer with more than 30 years of experience building reliable, production grade systems. My focus is using software as a force multiplier, codifying the expertise of global authorities into tools that clinicians can use, so children with genetic disorders get faster and more accurate diagnoses.</p>
+
+    <section class="summary" style="margin-top:28px">
+      <h2>Summary</h2>
+      <p>More than 30 years of industry experience, including close to 15 years running an independent software consultancy alongside my employed roles, delivering solutions across legal, finance, insurance, aerial imagery and medical research.</p>
+      <p>I have a strong track record building large scale, commercially viable Software as a Service platforms, with deep expertise in cloud computing, microservices architecture and modern development practices, and I enjoy modernising ageing legacy architectures into performant, reliable and cost effective systems.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Software Engineer</span>, <span class="role-org">Children's Medical Research Institute</span> &amp; <span class="role-org">Sydney Children's Hospitals Network</span></div>
+          <div class="role-dates">Feb 2023 &ndash; Present</div>
+        </div>
+        <p class="role-blurb">Building the software platform, clinical decision support tooling and cloud infrastructure for a connected genomics research and diagnostics ecosystem.</p>
+        <div class="label">Main projects</div>
+        <ul>
+          <li><strong><a href="https://geneie.frontiergenomics.com.au/">GENEie</a></strong> is the first evidence based clinical decision support software for accurate, confident clinical interpretation of extended splice site variants, producing ACMG aligned evidence for genetic pathology professionals.</li>
+          <li><strong>RNA Cloud</strong> is a cloud based platform for clinical RNA sequencing analysis, covering orchestration, alignment, quality control and custom genome reference builds.</li>
+        </ul>
+        <div class="label">Supporting work</div>
+        <ul>
+          <li>Lead engineer on data engineering pipelines assembling curated, clinically relevant reference datasets from sources such as Genomics England PanelApp, ClinVar and the Genome Reference Consortium.</li>
+          <li>Built and containerised HTTP APIs that wrap scientific tooling, for example SpliceAI scoring and pedigree plotting, so research methods run reliably as production services.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Owner</span>, <span class="role-org">Simplicate Technology</span></div>
+          <div class="role-dates">May 2008 &ndash; Feb 2023</div>
+        </div>
+        <p class="role-blurb">Founded and ran an independent software consultancy providing hosted web applications and technical consulting services, alongside employed roles for close to 15 years.</p>
+        <ul>
+          <li>Advised clients on software architecture and cloud computing strategy.</li>
+          <li>Introduced CI/CD pipelines and infrastructure as code to speed up and de risk delivery.</li>
+          <li>Helped teams adopt higher quality software practices including automated testing, code review and modern development workflows.</li>
+          <li>Provided technical leadership and mentoring, and built and hosted proof of concept web products.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Software Architect</span>, <span class="role-org">BizCover</span></div>
+          <div class="role-dates">Dec 2018 &ndash; Feb 2023</div>
+        </div>
+        <p class="role-blurb">Chief architect of a platform delivering insurance products priced by intricate rating algorithms.</p>
+        <ul>
+          <li>Designed rating algorithms involving dozens of parameters that return indicative pricing within milliseconds.</li>
+          <li>Architected the microservice platform that replaced BizCover's ageing legacy monolith.</li>
+          <li>Shaped the quality strategy across unit, integration, acceptance, functional and end to end testing.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Software Engineer</span>, <span class="role-org">CommSec</span></div>
+          <div class="role-dates">Jan 2018 &ndash; Dec 2018</div>
+        </div>
+        <p class="role-blurb">Enhanced the trading platform at the leading online stockbroking firm in Australia, an affiliate of the Commonwealth Bank.</p>
+        <ul>
+          <li>Implemented the Standard Portfolio Analysis of Risk (SPAN), calculating maximum potential loss for a portfolio of derivatives and reducing the bank's exposure to volatile markets.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Senior Software Engineer</span>, <span class="role-org">Nearmap</span></div>
+          <div class="role-dates">Oct 2014 &ndash; Nov 2017</div>
+        </div>
+        <ul>
+          <li>Contributed significantly to a large scale, cloud hosted solution using a wide range of AWS services.</li>
+          <li>Introduced and expanded a modern C# .NET microservices architecture, phasing out a legacy monolith that was hampering international launch.</li>
+          <li>Designed a real time data collection workflow and gained significant experience running C# on Linux via Mono.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Technical Lead</span>, <span class="role-org">Within Reach Software</span></div>
+          <div class="role-dates">Aug 2013 &ndash; Sep 2014</div>
+        </div>
+        <ul>
+          <li>Delivered projects across the superannuation and startup sectors.</li>
+          <li>Provided solutions and technical advice to enterprise customers such as Gadens Lawyers and to startups such as Geepers.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Tech Lead</span>, <span class="role-org">Community Engine</span></div>
+          <div class="role-dates">Mar 2011 &ndash; Dec 2012</div>
+        </div>
+        <ul>
+          <li>Led development of a social ecommerce platform with ASP.NET MVC 3 and 4, C#, MongoDB and jQuery.</li>
+          <li>Used AppHarbor, TeamCity, AWS (EC2, S3, SQS, Route 53), Git and GitHub, with continuous integration enabling reliable fortnightly deployments.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Senior Developer</span>, <span class="role-org">Blake Dawson</span></div>
+          <div class="role-dates">Jan 2005 &ndash; Jan 2012</div>
+        </div>
+        <p class="role-blurb">Three tier web based solutions as a Senior Developer and Analyst Programmer at the law firm, now Ashurst.</p>
+        <ul>
+          <li>Helped design and implement SALT, a multi tenant SaaS legal training application, one of the first major implementations of ASP.NET 1.1 in Australia.</li>
+          <li>Integrated line of business systems for matter opening automation using BizTalk 2004, InfoPath 2007 and SharePoint 2007.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-top">
+          <div><span class="role-title">Analyst Programmer</span>, <span class="role-org">AMP (IT@AMP)</span></div>
+          <div class="role-dates">2000 &ndash; 2003</div>
+        </div>
+        <ul>
+          <li>Worked on the high profile amp.com.au site within AMP's eBusiness team.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Projects</h2>
+      <p class="proj-note">A selection from <a href="https://github.com/PeterKneale">github.com/PeterKneale</a>.</p>
+
+      <div class="proj-cat">Bioinformatics &amp; tooling</div>
+      <div class="proj"><div class="name">bioassert<small>Rust</small></div><div class="desc">Bioinformatics assertion CLI for validating and gating pipeline outputs, with first class Nextflow integration.</div></div>
+      <div class="proj"><div class="name">nf-command-archiver<small>Groovy</small></div><div class="desc">Nextflow tooling for archiving the commands run by pipeline tasks.</div></div>
+      <div class="proj"><div class="name">bioinformatics_knowledge_base<small>Python</small></div><div class="desc">A curated knowledge base of bioinformatics notes and references.</div></div>
+
+      <div class="proj-cat">SaaS &amp; multi tenancy</div>
+      <div class="proj"><div class="name">modular_monolith_saas<small>C#, Postgres</small></div><div class="desc">Modular monolith SaaS starter solution for medium to large products.</div></div>
+      <div class="proj"><div class="name">micro-saas<small>C#, Postgres</small></div><div class="desc">Multi tenant modular monolith with DDD and tenant isolation via Postgres row level security.</div></div>
+      <div class="proj"><div class="name">HybridMicroOrm<small>C#</small></div><div class="desc">A lightweight, JSON based micro ORM for PostgreSQL with built in multi tenant support.</div></div>
+      <div class="proj"><div class="name">multi-tenant-dapper-postgres-rls<small>C#, Dapper</small></div><div class="desc">Multi tenant data access using Dapper and Postgres row level security.</div></div>
+      <div class="proj"><div class="name">multi-tenant-grpc-postgres-rls<small>C#, gRPC</small></div><div class="desc">Multi tenant application using gRPC, Dapper and Postgres row level security.</div></div>
+
+      <div class="proj-cat">Microservices &amp; cloud</div>
+      <div class="proj"><div class="name">k8s-dotnet-microservices<small>C#, Kubernetes</small></div><div class="desc">.NET microservices in a monorepo, deployed to Kubernetes with GitHub Actions.</div></div>
+      <div class="proj"><div class="name">serverless-dotnet-microservices<small>C#, AWS</small></div><div class="desc">Serverless .NET microservices in a monorepo SaaS.</div></div>
+      <div class="proj"><div class="name">microservices.chassis<small>C#</small></div><div class="desc">A microservices chassis providing reusable service scaffolding.</div></div>
+      <div class="proj"><div class="name">transactional_outbox<small>C#</small></div><div class="desc">A demonstration of the transactional outbox pattern.</div></div>
+      <div class="proj"><div class="name">aws_lightsail_github_actions<small>C#, AWS</small></div><div class="desc">Deploying a .NET application to AWS Lightsail with GitHub Actions.</div></div>
+
+      <div class="proj-cat">Patterns &amp; domain driven design</div>
+      <div class="proj"><div class="name">ddd_ef_core_and_postgres<small>C#</small></div><div class="desc">Domain driven design with EF Core and Postgres.</div></div>
+      <div class="proj"><div class="name">design_patterns<small>C#</small></div><div class="desc">A collection of design pattern examples.</div></div>
+      <div class="proj"><div class="name">Envoy<small>C#</small></div><div class="desc">A mediator pattern implementation.</div></div>
+      <div class="proj"><div class="name">Discounts<small>C#</small></div><div class="desc">A microservice demonstrating how to handle discounts.</div></div>
+    </section>
+
+    <footer>Built as a static site and deployed with GitHub Pages.</footer>
+  </main>
+
+</div>
+</body>
+</html>
